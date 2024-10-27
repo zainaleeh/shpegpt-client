@@ -1,0 +1,118 @@
+<div class="dialog">
+  <h2 class="dialog__title">Edit</h2>
+  <mat-divider class="dialog__divider"></mat-divider>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="companyDetailsPanelState = true"
+      (closed)="companyDetailsPanelState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>Company Details</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-dialog-content class="dialog__content">
+        <form
+          [formGroup]="companyForm"
+          (ngSubmit)="onSubmit()"
+          class="dialog__form"
+        >
+          <mat-form-field appearance="outline" class="dialog__field">
+            <mat-label>Position</mat-label>
+            <input
+              matInput
+              placeholder="E.g Software Engineer"
+              formControlName="position"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="dialog__field">
+            <mat-label>Contact</mat-label>
+            <input
+              matInput
+              placeholder="E.g Name (123-456-7890)"
+              formControlName="contact"
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="dialog__field">
+            <mat-label>Interview Scheduled</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              formControlName="interviewScheduled"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field
+            appearance="outline"
+            class="dialog__field dialog__notes-field"
+          >
+            <mat-label>Notes</mat-label>
+            <textarea
+              matInput
+              placeholder="e.g Email recruiter my resume."
+              formControlName="notes"
+            ></textarea>
+          </mat-form-field>
+        </form>
+      </mat-dialog-content>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-dialog-content class="dialog__content">
+    <form [formGroup]="companyForm">
+      <div class="dialog__radio-button">
+        <label class="dialog__radio-button-label">Sponsor</label>
+        <mat-radio-group
+          formControlName="sponsor"
+          aria-label="Select an option"
+        >
+          <mat-radio-button [value]="true">Yes</mat-radio-button>
+          <mat-radio-button [value]="false">No</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="dialog__checkbox">
+        <label class="dialog__slider-label">Resume Submitted</label>
+        <mat-checkbox
+          class="dialog__checkbox"
+          formControlName="resumeSubmitted"
+        ></mat-checkbox>
+      </div>
+
+      <div class="dialog__field dialog__slider">
+        <label class="dialog__slider-label">Interaction</label>
+        <mat-slider
+          class="dialog__slider-element"
+          min="0"
+          max="5"
+          step="1"
+          discrete
+          ><input matSliderThumb formControlName="interactionScore" #slider
+        /></mat-slider>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions class="dialog__actions" align="end">
+    <button
+      mat-button
+      [mat-dialog-close]="false"
+      class="dialog__button dialog__button--cancel"
+    >
+      Cancel
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit"
+      class="dialog__button dialog__button--submit"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+  </mat-dialog-actions>
+</div>

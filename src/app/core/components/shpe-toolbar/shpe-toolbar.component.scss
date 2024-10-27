@@ -1,0 +1,45 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #bebebe;
+
+  &__logo {
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+  }
+
+  &__navbuttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__options {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+
+  &__picture {
+    display: block;
+    margin: 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  &__name {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.user {
+  background-color: #ffffff;
+}
+
+.bot {
+  background-color: #ffffff;
+}
+
+.shpe-gpt-message-box {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  word-wrap: break-word;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 22px;
+    &__text {
+      display: flex;
+      align-items: center;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+  }
+}
+
+/* Small phones */
+@media only screen and (max-width: 399px) {
+  .shpe-gpt-message-box__container__text {
+    width: 95%;
+  }
+}
+
+/* Phones */
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+  .shpe-gpt-message-box__container__text {
+    width: 90%;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+  .shpe-gpt-message-box__container__text {
+    width: 80%;
+  }
+}
+
+/* Small Screens / Large Tablets */
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+  .shpe-gpt-message-box__container__text {
+    width: 70%;
+  }
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+  .shpe-gpt-message-box__container__text {
+    width: 50%;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 1400px) {
+  .shpe-gpt-message-box__container__text {
+    width: 30%;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="user-status">
+  <div class="user-status__loggedin">
+    <!-- <button
+      *ngIf="!(authService.isAuthenticated$ | async)"
+      mat-stroked-button
+      color="secondary"
+      (click)="login()"
+    >
+      <mat-icon>login</mat-icon> Log in
+    </button> -->
+
+    <div *ngIf="authService.isAuthenticated$ | async"></div>
+  </div>
+</div>

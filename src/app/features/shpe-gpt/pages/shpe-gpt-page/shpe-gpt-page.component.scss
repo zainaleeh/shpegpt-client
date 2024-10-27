@@ -1,0 +1,64 @@
+.shpe-gpt-page {
+  height: 100%;
+  width: 100%;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 94%;
+
+    &__message-box {
+      height: 80%;
+      width: 100%;
+    }
+
+    &__input-box {
+      width: 50%;
+      padding: 10px;
+    }
+  }
+}
+
+/* Small phones */
+@media only screen and (max-width: 399px) {
+  .shpe-gpt-page__body__input-box {
+    width: 90%;
+  }
+}
+
+/* Phones */
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+  .shpe-gpt-page__body__input-box {
+    width: 80%;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+  .shpe-gpt-page__body__input-box {
+    width: 70%;
+  }
+}
+
+/* Small Screens / Large Tablets */
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+  .shpe-gpt-page__body__input-box {
+    width: 60%;
+  }
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+  .shpe-gpt-page__body__input-box {
+    width: 50%;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 1400px) {
+  .shpe-gpt-page__body__input-box {
+    width: 40%;
+  }
+}

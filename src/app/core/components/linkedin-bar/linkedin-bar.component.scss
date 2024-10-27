@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #bebebe;
+
+  /* Ticker bar styling */
+  .ticker-bar {
+    background-color: #000000; /* Matches the toolbar's background for a cohesive look */
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    width: 100%; /* Full width for the ticker */
+    font-style: normal;
+  }
+
+  /* Ticker animation styling */
+  .ticker {
+    animation: tickerAnimation 16s linear infinite; /* Smooth and continuous scrolling */
+  }
+
+  /* Name styling */
+  .name {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700; /* Make the text bold for emphasis */
+  }
+
+  /* Ticker animation keyframes */
+  @keyframes tickerAnimation {
+    0% {
+      transform: translateX(100%); /* Start from the right end */
+    }
+    100% {
+      transform: translateX(-100%); /* Scroll to the left end */
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.company-page {
+  height: 100%;
+  width: 100%;
+
+  &__body {
+    margin: 8px;
+    height: 94%;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .company-page__body__seach-box {
+    width: 65%;
+  }
+}
+
+/* Phones */
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+  .company-page__body__seach-box {
+    width: 55%;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+  .company-page__body__seach-box {
+    width: 45%;
+  }
+}
+
+/* Small Screens / Large Tablets */
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+  .company-page__body__seach-box {
+    width: 35%;
+  }
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+  .company-page__body__seach-box {
+    width: 25%;
+  }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 1400px) {
+  .company-page__body__seach-box {
+    width: 15%;
+  }
+}

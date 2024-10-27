@@ -1,0 +1,11 @@
+<div class="company-page">
+  <div class="company-page__header">
+    <app-shpe-toolbar></app-shpe-toolbar>
+  </div>
+  <div class="company-page__body">
+    <app-company-grid
+      [companies]="companies"
+      (onUserCompanyUpdate)="onUserCompanyUpdate($event)"
+    ></app-company-grid>
+  </div>
+</div>

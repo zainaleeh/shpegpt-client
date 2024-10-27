@@ -1,0 +1,18 @@
+<mat-progress-bar *ngIf="isLoading" mode="buffer"></mat-progress-bar>
+<mat-form-field appearance="outline" class="shpe-gpt-input-box">
+  <mat-label>Send a message</mat-label>
+  <input
+    matInput
+    (keydown.enter)="sendMessage()"
+    [(ngModel)]="message"
+    [disabled]="isLoading"
+  />
+  <button
+    mat-icon-button
+    aria-label="Send message"
+    matSuffix
+    (click)="sendMessage()"
+  >
+    <mat-icon>send</mat-icon>
+  </button>
+</mat-form-field>

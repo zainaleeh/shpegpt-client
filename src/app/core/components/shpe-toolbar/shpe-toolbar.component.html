@@ -1,0 +1,28 @@
+<mat-toolbar class="toolbar">
+  <!-- <span class="toolbar__logo">SHPE</span> -->
+  <div class="toolbar__navbuttons">
+    <button
+      class="toolbar__navbuttons__button"
+      disableRipple
+      mat-button
+      (click)="navigateToCompanyPage()"
+    >
+      Company
+    </button>
+    <button
+      class="toolbar__navbuttons__button"
+      disableRipple
+      mat-button
+      (click)="navigateToShpeGPTPage()"
+    >
+      ShpeGPT
+    </button>
+  </div>
+  <div class="toolbar__options">
+    <div class="toolbar__options__help">
+      <button mat-icon-button aria-label="help" (click)="sendEmail()">
+        <mat-icon>help_outline</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>
